@@ -6,7 +6,7 @@ In the summer of 2023, I attended the Information Systems Training Course at Nat
 
 Following this, I discovered [localGPT](https://github.com/PromtEngineer/localGPT) through the YouTube channel  [Prompt Engineering](https://www.youtube.com/@engineerprompt). I also learned about [LM Studio](https://lmstudio.ai/) from a YouTuber named [VideotronicMaker](https://www.youtube.com/@videotronicmaker). Motivated by these resources, I sought to understand how to access and run the code from GitHub. I experimented with running localGPT in [VSCode](https://code.visualstudio.com/) and tried to understand the source code.
 
-To further my learning, I asked OpenAI ChatGPT for an example of a Flask web application to chat with the LM Studio local server. Additionally, I requested a simple Python example from Anthropic Claude to perform basic interactions with a local language model. My journey in exploring large language models also included getting up and running with [Ollama](https://ollama.com/).
+To further my learning, I asked OpenAI ChatGPT for an [example](https://github.com/AlleninTaipei/Flask-LMStudio-Chatbot) of a Flask web application to chat with the LM Studio local server. Additionally, I requested a simple Python [example](https://github.com/AlleninTaipei/Basic-interaction-with-a-local-language-model) from Anthropic Claude to perform basic interactions with a local language model. My journey in exploring large language models also included getting up and running with [Ollama](https://ollama.com/).
 
 Currently, I am gaining experience in understanding [llama.cpp](https://github.com/ggerganov/llama.cpp/tree/master).
 
