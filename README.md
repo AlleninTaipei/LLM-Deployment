@@ -38,7 +38,7 @@ Compiler `llama.cpp` with `make`
 
 The EXE files highlighted in green are the build results, while the blue ones indicate the original directories from the original `llama.cpp`  repository.
 
-I added a directory (modelsdownload) and copied a LLM named `Meta-Llama-3-8B-Instruct-Q4_K_M.gguf` into it. I used that Mistral model in LM Studio. I'm planning to use it to demonstrate LLM deployment in the following usage examples.
+I added a directory (modelsdownload) and copied a LLM named `Meta-Llama-3-8B-Instruct-Q4_K_M.gguf` into it. I used that Llama model in LM Studio. I'm planning to use it to demonstrate LLM deployment in the following usage examples.
 
 ### Get help 
 
