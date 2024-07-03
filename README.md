@@ -10,7 +10,7 @@ Currently, I am gaining experience in understanding [llama.cpp](https://github.c
 
 This repository is intended for environments without CUDA on Windows.
 
-### Download 
+### Download Compiler
 
 I use the Makefile method to compile (because I am not familiar with CMake), download the [w64devkit](https://github.com/skeeto/w64devkit/releases/download/v1.21.0/w64devkit-1.21.0.zip) compilation environment from GitHub. Unzip the Zip file and place it in a directory.
 
