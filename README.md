@@ -54,7 +54,7 @@ Use -h, --help, --usage to print usage.
 ### Command Line
 
 ```bash
-./llama-cli -m modelsdownload/Meta-Llama-3-8B-Instruct-Q4_K_M.gguf -p "Hi there! Please explain Neural Networks for a 6 years children in shot."
+./llama-cli -m modelsdownload/Meta-Llama-3-8B-Instruct-Q4_K_M.gguf -p "Please have one joke about artificial intelligence."
 ```
 
 ![image](cliresult.png)
