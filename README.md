@@ -36,6 +36,8 @@ Compiler `llama.cpp` with `make`
 
 ### Check compiler result
 
+* [Shell Command](https://github.com/AlleninTaipei/LLM-Deployment/blob/main/Shell%20Command.md)
+
 `ls -s -X`
 
 ![image](make.png)
