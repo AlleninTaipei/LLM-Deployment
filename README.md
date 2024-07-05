@@ -81,4 +81,7 @@ Use -h, --help, --usage to print usage.
 
 * [llama.cpp - Quantization](https://github.com/AlleninTaipei/LLM-Deployment/blob/main/llama.cpp%20-%20Quantization.md)
 
-
+@misc{llama.cpp,
+  title = {llama.cpp},
+  url = {https://github.com/ggerganov/llama.cpp},
+}
