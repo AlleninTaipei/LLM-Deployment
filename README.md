@@ -76,3 +76,9 @@ Use -h, --help, --usage to print usage.
 ![image](localserver.png)
 
 ![image](chat.png)
+
+### Additional information
+
+* [llama.cpp - Quantization](https://github.com/AlleninTaipei/LLM-Deployment/blob/main/llama.cpp%20-%20Quantization.md)
+
+
