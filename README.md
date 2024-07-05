@@ -12,7 +12,11 @@ Currently, I am gaining experience in understanding [llama.cpp](https://github.c
 
 ## Usage
 
-This repository is intended for environments without CUDA on Windows.
+* This repository is intended for environments without CUDA on Windows.
+
+* The instructions for inference usage can be found in this README file. You can find a fine-tuning example below.
+
+* [llama-finetune example](https://github.com/AlleninTaipei/LLM-Deployment/blob/main/Finetune%20Example.md)
 
 ### Download Compiler
 
