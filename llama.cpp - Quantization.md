@@ -32,8 +32,7 @@
 |-|-|
 |Perplexity|The 13B model consistently has lower perplexity than the 7B model, indicating better performance. As quantization becomes more aggressive (fewer bits), perplexity slightly increases, showing a small trade-off in performance.|
 |File size|Quantization significantly reduces file size. For example, the 7B model goes from 13.0G (F16) to 3.5G (Q4_0). The 13B model files are consistently larger than the 7B model files.|
-|Speed (ms/tok)|Lower values indicate faster processing. 8th generation hardware is generally faster than 4th generation. More aggressive quantization (e.g., Q4_0, Q4_1) tends to be faster than less aggressive quantization.
-The 13B model is slower than the 7B model due to its larger size.|
+|Speed (ms/tok)|Lower values indicate faster processing. 8th generation hardware is generally faster than 4th generation. More aggressive quantization (e.g., Q4_0, Q4_1) tends to be faster than less aggressive quantization. The 13B model is slower than the 7B model due to its larger size.|
 |Bits/weight|This shows the compression level, ranging from 16 bits (F16) down to 4.5 bits (Q4_0). The bits/weight are consistent between the 7B and 13B models for each quantization level.|
 
 |Q4_0 (4-bit quantization, type 0)|Q4_1 (4-bit quantization, type 1)|
