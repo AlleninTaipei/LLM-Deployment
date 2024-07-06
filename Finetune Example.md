@@ -280,3 +280,18 @@ main: total training time: 03:44:04
 ||**Versioning and experimentation**: You can keep multiple LoRA files for different fine-tuning experiments or versions, without needing to store multiple copies of the full model.|
 ||**Deployment efficiency**: In some deployment scenarios, you can keep the large base model static and swap in different LoRA adaptations as needed, which is more efficient than loading entire fine-tuned models.|
 
+### Comparison of Instruction Models and Normal Language Models
+
+| Aspect | Normal Language Models | Instruction Models |
+|--------|------------------------|---------------------|
+| Purpose | Predict the next token in a sequence | Understand and follow specific instructions or prompts |
+| Training Data | Large corpus of unstructured text | Pairs of instructions/prompts and corresponding responses |
+| Output | Generates text by continuing from a given prompt | Generates a response tailored to the given instruction |
+| Primary Usage | Open-ended text generation, completion tasks, general language understanding | Task-specific applications, answering questions, following complex prompts |
+| Example Task | Complete "The cat sat on the..." | Respond to "Summarize the plot of Romeo and Juliet" |
+| Input Format | Single text input | Structured input with clear instruction and context |
+| Task Adaptability | More general, may require careful prompting for specific tasks | Explicitly trained to handle various tasks based on instructions |
+| Output Control | May diverge from intended topic more easily | Designed to stay focused on given task or instruction |
+| Fine-tuning Approach | Often fine-tuned on domain-specific text | Fine-tuned on instruction-response pairs |
+| Prompt Sensitivity | More sensitive to exact prompt wording | Trained to understand various phrasings of similar instructions |
+| Shakespeare Example | Generate Shakespeare-like text or complete partial sentences in his style | Write a sonnet about AI in Shakespeare's style or explain themes in his plays |
