@@ -280,7 +280,9 @@ main: total training time: 03:44:04
 ||**Versioning and experimentation**: You can keep multiple LoRA files for different fine-tuning experiments or versions, without needing to store multiple copies of the full model.|
 ||**Deployment efficiency**: In some deployment scenarios, you can keep the large base model static and swap in different LoRA adaptations as needed, which is more efficient than loading entire fine-tuned models.|
 
-### Comparison of Instruction Models and Normal Language Models
+### Q & A
+
+#### Comparison of Instruction Models and Normal Language Models
 
 | Aspect | Normal Language Models | Instruction Models |
 |--------|------------------------|---------------------|
