@@ -497,3 +497,27 @@ save_as_llama_lora: saving to codellama-7b-instruct-LATEST.bin
 train_opt_callback: iter=    30 sample=121/5241253 sched=0.300000 loss=2.079428 dt=00:05:48 eta=0.0ms |--->
 main: total training time: 03:19:14
 ```
+
+* Plotting the Loss Values
+
+```python
+
+import matplotlib.pyplot as plt
+
+# Loss values
+loss_values = [
+    2.313577, 2.103154, 2.391052, 2.124313, 1.996203, 2.102590, 2.304331, 2.146137, 2.420793, 2.434512,
+    2.194705, 1.992177, 1.984968, 2.234117, 2.623795, 2.190383, 2.055472, 2.065167, 2.461776, 1.673253,
+    1.907680, 1.958002, 2.291169, 1.706429, 1.926794, 2.240768, 1.782165, 1.737541, 1.770476, 2.079428
+]
+
+# Plotting
+plt.figure(figsize=(10, 5))
+plt.plot(loss_values, marker='o', linestyle='-', color='b')
+plt.title('Training Loss Over Iterations')
+plt.xlabel('Iteration')
+plt.ylabel('Loss')
+plt.grid(True)
+plt.show()
+
+```
