@@ -300,6 +300,8 @@ main: total training time: 03:44:04
 
 #### Examples for Instruction Models
 
+* [Get to know Instruction Dataset](https://github.com/AlleninTaipei/Artificial-Intelligence-Study/blob/main/Get%20to%20know%20Instruction%20Dataset.md#get-to-know-instruction-dataset)
+
 ```plaintext
 
 D:\AI2\w64devkit>w64devkit.exe
