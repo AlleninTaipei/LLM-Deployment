@@ -298,6 +298,9 @@ main: total training time: 03:44:04
 | Prompt Sensitivity | More sensitive to exact prompt wording | Trained to understand various phrasings of similar instructions |
 | Shakespeare Example | Generate Shakespeare-like text or complete partial sentences in his style | Write a sonnet about AI in Shakespeare's style or explain themes in his plays |
 
+#### Examples for Instruction Models
+
+```plaintext
 
 D:\AI2\w64devkit>w64devkit.exe
 ~ $ cd d:\\ai2\\llama.cpp
@@ -491,3 +494,4 @@ save_as_llama_lora: saving to codellama-7b-instruct-30.bin
 save_as_llama_lora: saving to codellama-7b-instruct-LATEST.bin
 train_opt_callback: iter=    30 sample=121/5241253 sched=0.300000 loss=2.079428 dt=00:05:48 eta=0.0ms |--->
 main: total training time: 03:19:14
+```
