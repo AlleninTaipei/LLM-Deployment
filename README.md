@@ -1,11 +1,8 @@
 # LLM Deployment
 
 * [Source](https://github.com/ggerganov/llama.cpp): llama.cpp
-
 * This repository is intended for environments without CUDA on Windows.
-
-* The instructions for inference usage can be found in this README file. You can find a fine-tuning example below.
-
+* The instructions for inference usage can be found in this README file.
 * [llama-finetune example](https://github.com/AlleninTaipei/LLM-Deployment/blob/main/Finetune%20Example.md)
 
 ## Download Compiler
