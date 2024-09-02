@@ -544,7 +544,7 @@ For a dataset with 1000 samples and a batch size of 32, there will be 32 iterati
 * **Mini-Batch Gradient Descent:** Finally, mini-batch gradient descent is when the batch size is greater than 1 but strictly smaller than the dataset size.
 That is to say: 1 < Batch Size < Dataset size
 
-### Predictive accuracy (often shortened to "predictive-acc.")
+#### Predictive accuracy (often shortened to "predictive-acc.")
 
 * **Accuracy=(Number of Correct Predictions / Total Number of Predictions)x100**
 * **Model Evaluation:** It's a key metric to evaluate how well an LLM performs on a given task, such as text classification, sentiment analysis, or question answering.
