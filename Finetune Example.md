@@ -521,3 +521,31 @@ plt.grid(True)
 plt.show()
 
 ```
+
+#### Understanding Batch Size in Machine Learning
+
+* **Batch size** is a crucial hyperparameter in training machine learning models, particularly in deep learning. It refers to the number of training examples utilized in one forward and backward pass of the neural network.
+* **Forward Pass:** The input data is passed through the network, and the output (predictions) is computed.
+* **Backward Pass:** The error (difference between the predicted output and actual output) is calculated and used to update the model parameters through backpropagation.
+* **Single Batch:** When training a model, the dataset is divided into smaller subsets (batches). Each batch contains a fixed number of training examples determined by the batch size.
+If the batch size is 32, it means 32 samples of the training data are passed through the network at once before updating the model parameters.
+For a dataset with 1000 samples and a batch size of 32, there will be 32 iterations (batches) in one epoch (one complete pass through the entire dataset).
+* **Memory Usage:** Larger batch sizes require more memory (VRAM) because more data needs to be loaded into memory simultaneously. Smaller batch sizes use less memory but may take longer to train because they require more iterations.
+* **Training Speed:** Larger batches allow for more efficient computation, often leveraging optimized hardware like GPUs. Smaller batches might slow down training due to less efficient hardware utilization.
+* **Convergence and Stability:** Larger batches tend to provide more stable and smooth convergence. Smaller batches can introduce more noise into the gradient descent process, which might help the model escape local minima but can also lead to instability.
+
+#### Understanding Epoch
+
+* **One complete pass through the entire training dataset.**
+* **During an epoch, every example in the training dataset is processed once. If the dataset has 1 million examples and the batch size is 1,000, then 1,000 iterations are required to complete one epoch (1 million examples / 1,000 examples per batch).**
+* A **batch** refers to a set of samples used during the training of a model. The model is updated after every batch is processed. If we define for example a batch of size 5. For every 5 samples of the MNIST dataset, the digits predicted are compared to the expected ones and an error is calculated.
+* **Batch gradient descent** is when the batch size equals the size of the training set.
+* **Stochastic Gradient Descent:** As explained above, SGD is when the batch size equals 1.
+* **Mini-Batch Gradient Descent:** Finally, mini-batch gradient descent is when the batch size is greater than 1 but strictly smaller than the dataset size.
+That is to say: 1 < Batch Size < Dataset size
+
+### Predictive accuracy (often shortened to "predictive-acc.")
+
+* **Accuracy=(Number of Correct Predictions / Total Number of Predictions)x100**
+* **Model Evaluation:** It's a key metric to evaluate how well an LLM performs on a given task, such as text classification, sentiment analysis, or question answering.
+* **Comparative Measure:** It allows for the comparison of different models or different versions of the same model to determine which performs better on the task at hand.
