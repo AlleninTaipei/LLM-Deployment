@@ -529,23 +529,42 @@ plt.show()
 * **Backward Pass:** The error (difference between the predicted output and actual output) is calculated and used to update the model parameters through backpropagation.
 * **Single Batch:** When training a model, the dataset is divided into smaller subsets (batches). Each batch contains a fixed number of training examples determined by the batch size.
 If the batch size is 32, it means 32 samples of the training data are passed through the network at once before updating the model parameters.
-For a dataset with 1000 samples and a batch size of 32, there will be 32 iterations (batches) in one epoch (one complete pass through the entire dataset).
 * **Memory Usage:** Larger batch sizes require more memory (VRAM) because more data needs to be loaded into memory simultaneously. Smaller batch sizes use less memory but may take longer to train because they require more iterations.
 * **Training Speed:** Larger batches allow for more efficient computation, often leveraging optimized hardware like GPUs. Smaller batches might slow down training due to less efficient hardware utilization.
 * **Convergence and Stability:** Larger batches tend to provide more stable and smooth convergence. Smaller batches can introduce more noise into the gradient descent process, which might help the model escape local minima but can also lead to instability.
 
-#### Understanding Epoch
-
-* **One complete pass through the entire training dataset.**
-* **During an epoch, every example in the training dataset is processed once. If the dataset has 1 million examples and the batch size is 1,000, then 1,000 iterations are required to complete one epoch (1 million examples / 1,000 examples per batch).**
-* A **batch** refers to a set of samples used during the training of a model. The model is updated after every batch is processed. If we define for example a batch of size 5. For every 5 samples of the MNIST dataset, the digits predicted are compared to the expected ones and an error is calculated.
-* **Batch gradient descent** is when the batch size equals the size of the training set.
-* **Stochastic Gradient Descent:** As explained above, SGD is when the batch size equals 1.
-* **Mini-Batch Gradient Descent:** Finally, mini-batch gradient descent is when the batch size is greater than 1 but strictly smaller than the dataset size.
-That is to say: 1 < Batch Size < Dataset size
+|batch_size|Notes|
+|-|-|
+|**Batch gradient descent**|When the batch size equals the size of the training set.|
+|**Stochastic Gradient Descent**|SGD is when the batch size equals 1.|
+|**Mini-Batch Gradient Descent**|1 < Batch Size < Dataset size|
 
 #### Predictive accuracy (often shortened to "predictive-acc.")
 
 * **Accuracy=(Number of Correct Predictions / Total Number of Predictions)x100**
 * **Model Evaluation:** It's a key metric to evaluate how well an LLM performs on a given task, such as text classification, sentiment analysis, or question answering.
 * **Comparative Measure:** It allows for the comparison of different models or different versions of the same model to determine which performs better on the task at hand.
+
+#### Training Loss Over Iterations
+
+* **Training Loss:** The training loss is a measure of how well the model's predictions match the actual outputs for the training data. It is calculated by a loss function, which computes the difference between the predicted values and the true values. Common loss functions include Mean Squared Error (MSE) for regression tasks and Cross-Entropy Loss for classification tasks.
+* **Loss Function:** The loss function gives a numerical value that represents how far the model's predictions are from the actual results. The lower the loss, the better the model's predictions.
+* **Iteration:** An iteration refers to one complete cycle through a batch of data during the training process. If you have a dataset and you set a batch_size, each time the model processes one batch of samples and updates its weights, that's one iteration.
+* **Epoch:** An epoch is one full pass through the entire training dataset. If your dataset has 1000 samples and your batch size is 100, it will take 10 iterations to complete one epoch.
+
+* As training progresses, the loss is computed and tracked at each iteration. The loss typically changes (hopefully decreases) over time, and observing this change can provide insights into how well the model is learning.
+
+|Training Loss Over Iterations|Notes|
+|-|-|
+|**Initial Loss**|At the start of training, the loss is usually higher because the model's weights are initialized randomly or with very basic strategies. The predictions at this point are likely far off from the actual outputs.|
+|**Decreasing Loss**|As the model trains and updates its weights through backpropagation and optimization, the loss should generally decrease, indicating that the model is learning and making better predictions.|
+|**Convergence**|Over many iterations, the loss may start to level off, indicating that the model is reaching its optimal point, or at least a point of diminishing returns where further training yields minimal improvements.|
+|**Overfitting**|If the loss decreases to a point and then starts to increase, this might indicate overfitting, where the model is becoming too tailored to the training data and not generalizing well to new, unseen data.|
+|**Learning Rate**|The learning rate, a hyperparameter that controls how much to change the model in response to the estimated error each time the model's weights are updated, plays a crucial role in how the loss changes over iterations. Too high a learning rate can cause the loss to oscillate or diverge, while too low a learning rate can lead to very slow learning.|
+
+|Visualizing Training Loss|The x-axis represents the number of iterations or epochs.<br>The y-axis represents the loss value.<br>The goal is typically to see a downward trend in the loss, which indicates that the model is learning.|
+|:-|:-|
+|**Smooth Downward Slope**|This is ideal, showing that the model is learning steadily.|
+|**Jagged Line**|A very jagged loss curve may indicate that the learning rate is too high or that the batch size is too small.|
+|**Plateau**|If the loss plateaus, the model might be stuck in a local minimum or may need adjustments like learning rate decay.|
+|**Increase After Decrease**8|This might indicate overfitting, suggesting the need for regularization or early stopping.|
